@@ -1,0 +1,72 @@
+{
+  "name": "country-autocomplete",
+  "private": false,
+  "version": "1.0.0",
+  "description": "React component to autocomplete country names",
+  "author": "Agustin Maggi <contact@agustinmaggi.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "country",
+    "autocomplete",
+    "google"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/country-autocomplete.umd.cjs",
+  "module": "./dist/country-autocomplete.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/country-autocomplete.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/country-autocomplete.umd.cjs"
+      }
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prepublishOnly": "npm run build",
+    "release:beta": "npm run build && npm publish --tag beta --access public"
+  },
+  "dependencies": {
+    "react-select": "^5.8.0"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.54.10",
+    "@types/node": "^20.10.3",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.6.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-maggi/country-autocomplete.git"
+  },
+  "bugs": {
+    "url": "https://github.com/a-maggi/country-autocomplete/issues"
+  },
+  "homepage": "https://country-autocomplete.vercel.app/"
+}
